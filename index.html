@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex.Dev — Portafolio 2026</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            corePlugins: { preflight: false }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container py-3" style="max-width: 1120px;">
+
+        <!-- ════════════════════════════════════════════
+             HEADER
+        ════════════════════════════════════════════ -->
+        <header class="site-header">
+            <a href="#" class="logo">
+                <div class="logo-icon">A</div>
+                <span class="logo-text">ALEX.DEV <span>/ 2026</span></span>
+            </a>
+            <div class="hire-badge">DISPONIBLE PARA CONTRATAR</div>
+        </header>
+
+        <!-- ════════════════════════════════════════════
+             BENTO GRID
+        ════════════════════════════════════════════ -->
+        <div class="row g-3">
+
+            <!-- ── COLUMNA IZQUIERDA ── -->
+            <div class="col-lg-7 bento-grid">
+
+                <!-- Hero Card -->
+                <div class="card-dark hero-card">
+                    <span class="label-tag">Desarrollador Full Stack Senior</span>
+                    <h1 class="hero-title">
+                        Diseñando el<br>
+                        <span class="gradient-text">Futuro de la Web</span>
+                    </h1>
+                    <p class="hero-description">
+                        Creando experiencias digitales de alto rendimiento con
+                        Next.js, Rust y arquitecturas impulsadas por IA.
+                        Especializado en escalabilidad y entrega impecable.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-accent" id="btnContact">
+                            Contáctame <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem"></i>
+                        </button>
+                        <button class="btn-outline" id="btnProjects">Ver Proyectos</button>
+                    </div>
+                </div>
+
+                <!-- Featured Project -->
+                <div class="card-dark project-featured" id="projects">
+                    <div class="project-image-wrapper">
+                        <div class="fake-chart"></div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js 15</span>
+                        <span class="project-tag">Rust</span>
+                    </div>
+                    <div class="project-title-row">
+                        <h3 class="project-title">Protocolo Aether</h3>
+                        <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <p class="project-description">
+                        Motor de visualización financiera descentralizada que maneja más de 1M+
+                        transacciones por segundo con analíticas en tiempo real.
+                    </p>
+                </div>
+
+                <!-- Small Projects Row -->
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="card-dark project-small">
+                            <div class="project-small-header">
+                                <div class="project-small-icon green">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <div>
+                                    <div class="project-small-name">NeuralSync AI</div>
+                                    <div class="project-small-meta">LABS / 88</div>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Implementación personalizada de LLM para revisión
+                                arquitectónica automatizada en repositorios a gran escala.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card-dark project-small">
+                            <div class="project-small-header">
+                                <div class="project-small-icon purple">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </div>
+                                <div>
+                                    <div class="project-small-name">SwiftMotion Pro</div>
+                                    <div class="project-small-meta">LABS / 12</div>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Rendimiento nativo utilizando frameworks modernos de
+                                animación con interfaces fluidas y responsivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── COLUMNA DERECHA ── -->
+            <div class="col-lg-5 bento-grid">
+
+                <!-- Metrics Card -->
+                <div class="card-dark metrics-card">
+                    <div class="metrics-title">Métricas de Rendimiento</div>
+
+                    <div class="metric-item">
+                        <div class="metric-info">
+                            <div class="metric-number">100</div>
+                            <div class="metric-label">Puntuación Lighthouse</div>
+                        </div>
+                        <div class="metric-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-info">
+                            <div class="metric-number">08+</div>
+                            <div class="metric-label">Años de Experiencia</div>
+                        </div>
+                        <div class="metric-icon"><i class="fa-regular fa-calendar"></i></div>
+                    </div>
+
+                    <div class="metric-item">
+                        <div class="metric-info">
+                            <div class="metric-number">50+</div>
+                            <div class="metric-label">Apps Entregadas</div>
+                        </div>
+                        <div class="metric-icon"><i class="fa-solid fa-rocket"></i></div>
+                    </div>
+                </div>
+
+                <!-- Expertise Card -->
+                <div class="card-dark">
+                    <div class="expertise-title">Experiencia Técnica</div>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon nextjs"><i class="fa-brands fa-node-js"></i></div>
+                            <span class="expertise-label">NEXT.JS</span>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon rust"><i class="fa-brands fa-rust"></i></div>
+                            <span class="expertise-label">RUST</span>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon tailwind"><i class="fa-solid fa-wind"></i></div>
+                            <span class="expertise-label">TAILWIND</span>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon typescript"><i class="fa-brands fa-js"></i></div>
+                            <span class="expertise-label">TS 5.0</span>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon postgres"><i class="fa-solid fa-database"></i></div>
+                            <span class="expertise-label">POSTGRES</span>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon graphql"><i class="fa-solid fa-diagram-project"></i></div>
+                            <span class="expertise-label">GRAPHQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Card -->
+                <div class="card-dark">
+                    <div class="activity-title">Actividad</div>
+
+                    <div class="activity-item">
+                        <div class="activity-dot blue"></div>
+                        <div>
+                            <div class="activity-text">
+                                <strong>merged</strong> PR #1280 en production-main
+                            </div>
+                            <div class="activity-time">hace 2 minutos</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-dot green"></div>
+                        <div>
+                            <div class="activity-text">
+                                <strong>deploy</strong> exitoso v2.4.0
+                            </div>
+                            <div class="activity-time">hace 46 minutos</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-dot blue"></div>
+                        <div>
+                            <div class="activity-text">
+                                <strong>review</strong> aprobado en feature/auth-module
+                            </div>
+                            <div class="activity-time">hace 2 horas</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════
+         MODAL DE CONTACTO (Tailwind)
+    ════════════════════════════════════════════ -->
+    <div id="contactModal"
+         class="tw-hidden tw-fixed tw-inset-0 tw-z-50 tw-flex tw-items-center tw-justify-center tw-bg-black/60 tw-backdrop-blur-sm tw-p-4">
+
+        <div class="modal-panel tw-w-full tw-max-w-md tw-bg-[#141420] tw-border tw-border-[#1F1F32] tw-rounded-2xl tw-p-8 tw-relative"
+             style="opacity:0; transform:scale(0.95); transition: all 0.25s cubic-bezier(0.16,1,0.3,1);">
+
+            <!-- Cerrar -->
+            <button id="btnCloseModal"
+                    class="tw-absolute tw-top-4 tw-right-4 tw-w-8 tw-h-8 tw-flex tw-items-center tw-justify-center tw-rounded-lg tw-border tw-border-[#1F1F32] tw-text-gray-400 hover:tw-text-white hover:tw-border-gray-500 tw-bg-transparent tw-transition-colors"
+                    type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Título -->
+            <h2 class="tw-text-2xl tw-font-bold tw-text-white tw-mb-1">Contáctame</h2>
+            <p class="tw-text-sm tw-text-gray-400 tw-mb-6">Completa el formulario y te responderé pronto.</p>
+
+            <!-- Formulario -->
+            <form id="contactForm" novalidate>
+
+                <!-- Nombre -->
+                <div class="tw-mb-4">
+                    <label for="inputNombre" class="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-1.5">
+                        Nombre
+                    </label>
+                    <input type="text" id="inputNombre"
+                           class="tw-w-full tw-bg-[#0B0B11] tw-border tw-border-[#1F1F32] tw-rounded-lg tw-px-4 tw-py-3 tw-text-white tw-text-sm tw-placeholder-gray-500 focus:tw-outline-none focus:tw-border-cyan-500 tw-transition-colors"
+                           placeholder="Tu nombre completo">
+                    <span id="errorNombre" class="field-error tw-block tw-text-xs tw-text-red-400 tw-mt-1"></span>
+                </div>
+
+                <!-- Correo -->
+                <div class="tw-mb-4">
+                    <label for="inputCorreo" class="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-1.5">
+                        Correo
+                    </label>
+                    <input type="email" id="inputCorreo"
+                           class="tw-w-full tw-bg-[#0B0B11] tw-border tw-border-[#1F1F32] tw-rounded-lg tw-px-4 tw-py-3 tw-text-white tw-text-sm tw-placeholder-gray-500 focus:tw-outline-none focus:tw-border-cyan-500 tw-transition-colors"
+                           placeholder="tu@correo.com">
+                    <span id="errorCorreo" class="field-error tw-block tw-text-xs tw-text-red-400 tw-mt-1"></span>
+                </div>
+
+                <!-- Asunto -->
+                <div class="tw-mb-6">
+                    <label for="inputAsunto" class="tw-block tw-text-sm tw-font-medium tw-text-gray-300 tw-mb-1.5">
+                        Asunto
+                    </label>
+                    <textarea id="inputAsunto" rows="4"
+                              class="tw-w-full tw-bg-[#0B0B11] tw-border tw-border-[#1F1F32] tw-rounded-lg tw-px-4 tw-py-3 tw-text-white tw-text-sm tw-placeholder-gray-500 tw-resize-none focus:tw-outline-none focus:tw-border-cyan-500 tw-transition-colors"
+                              placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                    <span id="errorAsunto" class="field-error tw-block tw-text-xs tw-text-red-400 tw-mt-1"></span>
+                </div>
+
+                <!-- Enviar -->
+                <button type="submit" id="btnSubmit"
+                        class="tw-w-full tw-bg-cyan-500 tw-text-gray-900 tw-font-semibold tw-py-3 tw-rounded-lg tw-text-sm hover:tw-bg-cyan-400 tw-transition-colors tw-border-0 tw-cursor-pointer">
+                    Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <!-- (se crea dinámicamente desde main.js) -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
