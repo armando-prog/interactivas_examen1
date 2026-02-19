@@ -1,10 +1,8 @@
 :root {
-    --bg-primary: #0B0B11;
-    --bg-card: #141420;
-    --border-color: #1F1F32;
-    --text-primary: #FFFFFF;
-    --text-secondary: #8B8BA3;
-    --text-muted: #5A5A72;
+    --bg-card: #1a1e24;
+    --border-color: #2e3338;
+    --text-secondary: #9ca3af;
+    --text-muted: #6c757d;
     --accent-cyan: #06B6D4;
     --accent-teal: #14B8A6;
     --accent-purple: #8B5CF6;
@@ -18,9 +16,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Bootstrap maneja el fondo y color de texto con data-bs-theme */
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
     font-family: var(--font-sans);
     min-height: 100vh;
     overflow-x: hidden;
@@ -53,7 +50,6 @@ body {
 .logo-text {
     font-family: var(--font-mono);
     font-size: 0.9rem; font-weight: 600;
-    color: var(--text-primary);
     letter-spacing: 0.5px;
 }
 .logo-text span { color: var(--accent-cyan); }
@@ -88,7 +84,7 @@ body {
     padding: 1.75rem;
     transition: border-color 0.3s ease;
 }
-.card-dark:hover { border-color: #2A2A42; }
+.card-dark:hover { border-color: #3d4349; }
 
 /* Hero */
 
@@ -127,7 +123,7 @@ body {
 
 .btn-accent {
     display: inline-flex; align-items: center; gap: 0.5rem;
-    background-color: var(--accent-cyan); color: #0B0B11;
+    background-color: var(--accent-cyan); color: #111;
     font-weight: 600; font-size: 0.9rem;
     padding: 0.7rem 1.5rem; border-radius: 10px;
     border: none; cursor: pointer;
@@ -141,7 +137,7 @@ body {
 
 .btn-outline {
     display: inline-flex; align-items: center; gap: 0.5rem;
-    background-color: transparent; color: var(--text-primary);
+    background-color: transparent; color: inherit;
     font-weight: 600; font-size: 0.9rem;
     padding: 0.7rem 1.5rem; border-radius: 10px;
     border: 1px solid var(--border-color); cursor: pointer;
@@ -304,12 +300,12 @@ body {
 }
 .expertise-icon:hover { transform: scale(1.1); }
 
-.expertise-icon.nextjs { background: #1a1a2e; color: #fff; border: 1px solid #333; }
-.expertise-icon.rust { background: #2a1a0a; color: var(--accent-orange); border: 1px solid #3d2a14; }
-.expertise-icon.tailwind { background: #0a1f2e; color: var(--accent-cyan); border: 1px solid #143040; }
-.expertise-icon.typescript { background: #0a1a3e; color: var(--accent-blue); border: 1px solid #14285a; }
-.expertise-icon.postgres { background: #0a1e2e; color: var(--accent-blue); border: 1px solid #142840; }
-.expertise-icon.graphql { background: #2a0a2e; color: var(--accent-pink); border: 1px solid #3d1442; }
+.expertise-icon.nextjs { background: #161b22; color: #fff; border: 1px solid var(--border-color); }
+.expertise-icon.rust { background: #261a0a; color: var(--accent-orange); border: 1px solid var(--border-color); }
+.expertise-icon.tailwind { background: #0c1f2e; color: var(--accent-cyan); border: 1px solid var(--border-color); }
+.expertise-icon.typescript { background: #0c1a38; color: var(--accent-blue); border: 1px solid var(--border-color); }
+.expertise-icon.postgres { background: #0c1e2e; color: var(--accent-blue); border: 1px solid var(--border-color); }
+.expertise-icon.graphql { background: #260a2e; color: var(--accent-pink); border: 1px solid var(--border-color); }
 
 .expertise-label {
     font-family: var(--font-mono); font-size: 0.6rem;
@@ -381,7 +377,7 @@ body {
 /* Scrollbar */
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-track { background: var(--bs-body-bg, #212529); }
 ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
@@ -389,8 +385,8 @@ body {
 
 .spinner {
     display: inline-block; width: 18px; height: 18px;
-    border: 2px solid rgba(11, 11, 17, 0.3);
-    border-top-color: #0B0B11;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-top-color: #111;
     border-radius: 50%;
     animation: spin 0.6s linear infinite;
     vertical-align: middle; margin-right: 0.5rem;
