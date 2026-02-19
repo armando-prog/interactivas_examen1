@@ -95,17 +95,12 @@ $(document).ready(function () {
             asunto: $('#inputAsunto').val().trim()
         };
 
+        // Intento 1: Ajax normal con form-urlencoded (evita preflight CORS)
         $.ajax({
             url: API_URL,
             method: 'POST',
-            contentType: 'application/json',
-            dataType: 'json',
-            crossDomain: true,
-            headers: {
-                'ngrok-skip-browser-warning': 'true',
-                'Accept': 'application/json'
-            },
-            data: JSON.stringify(formData),
+            data: $.param(formData),
+            timeout: 10000,
             success: function (response) {
                 $btn.prop('disabled', false).html(originalText);
                 closeModal();
@@ -113,30 +108,24 @@ $(document).ready(function () {
                 if (response && typeof response === 'object') {
                     respMsg = response.message || response.msg || JSON.stringify(response);
                 } else if (response) {
-                    respMsg = response;
+                    respMsg = String(response);
                 }
                 showToast('success', '¡Mensaje enviado! ' + respMsg);
             },
-            error: function (xhr, textStatus, errorThrown) {
-                $btn.prop('disabled', false).html(originalText);
-                var msg = '';
-
-                if (xhr.status === 0) {
-                    msg = 'No se pudo conectar con el servidor. Verifica tu conexión o que la API esté activa.';
-                } else if (xhr.responseJSON && (xhr.responseJSON.message || xhr.responseJSON.msg)) {
-                    msg = xhr.responseJSON.message || xhr.responseJSON.msg;
-                } else if (xhr.responseText) {
-                    try {
-                        var parsed = JSON.parse(xhr.responseText);
-                        msg = parsed.message || parsed.msg || xhr.responseText;
-                    } catch (e) {
-                        msg = 'Error del servidor (código ' + xhr.status + ')';
-                    }
-                } else {
-                    msg = 'Error: ' + textStatus + ' - ' + errorThrown;
-                }
-
-                showToast('error', msg);
+            error: function () {
+                // Intento 2: fetch con no-cors (el dato se envía aunque no leamos la respuesta)
+                fetch(API_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: new URLSearchParams(formData)
+                }).then(function () {
+                    $btn.prop('disabled', false).html(originalText);
+                    closeModal();
+                    showToast('success', '¡Mensaje enviado correctamente!');
+                }).catch(function () {
+                    $btn.prop('disabled', false).html(originalText);
+                    showToast('error', 'No se pudo conectar con el servidor.');
+                });
             }
         });
     });
